@@ -1,7 +1,9 @@
-declare module '@capacitor/core' {
-  interface PluginRegistry { 
-    IosAudioPlugin: IosAudioPluginPlugin;
-  }
+// declare module '@capacitor/core' {
+  
+// }
+
+export interface PluginRegistry { 
+  IosAudioPlugin: IosAudioPluginPlugin;
 }
 
 export interface IosAudioPluginPlugin {

@@ -13,8 +13,7 @@
     "ios/Sources",
     "ios/Tests",
     "Package.swift",
-    "Iosaudioplugin.podspec",
-    "src"
+    "Iosaudioplugin.podspec"
   ],
   "author": "",
   "license": "MIT",
