@@ -25,26 +25,24 @@ public class IosAudioPluginPlugin: CAPPlugin, CAPBridgedPlugin {
     }
 
     @objc func setSpeaker(_ call: CAPPluginCall) {
-        NSLog("Cuong: setSpeaker")
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(.playAndRecord, mode: .default)
             try audioSession.overrideOutputAudioPort(.speaker)
             call.resolve()
         } catch {
-            NSLog("Cuong: setSpeaker error")
+            NSLog("setSpeaker error")
         }
     }
 
     @objc func setEarPiece(_ call: CAPPluginCall) {
-        NSLog("Cuong: setEarPiece")
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(.playAndRecord, mode: .default)
             try audioSession.overrideOutputAudioPort(.none)
             call.resolve()
         } catch {
-            NSLog("Cuong: setEarPiece error")
+            NSLog("setEarPiece error")
         }
     }
 }
